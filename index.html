@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тетріс</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="img/Group 13.png" alt="Game Logo">
+        </div>
+        <h2 class="welcome-heading">Ласкаво просимо до <span>Тетрісу</span>!</h2>
+        <div id="welcome-screen" class="screen">
+            <input type="text" id="player-name" placeholder="Введіть ваше ім'я">
+            <div class="buttons-container">
+                <button id="start-game">Почати гру</button>
+                <button id="show-instructions">Інструкція</button>
+            </div>
+
+            <div class="media-block">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/kctRQuEQhjk?si=QUSyyUtsVNXJz39A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="widget-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10293.451214557877!2d23.9953823871582!3d49.835640200000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add7a31f0dccd%3A0x9869cc7025bc8e3f!2z0J3QsNGG0ZbQvtC90LDQu9GM0L3QuNC5INGD0L3RltCy0LXRgNGB0LjRgtC10YIgItCb0YzQstGW0LLRgdGM0LrQsCDQn9C-0LvRltGC0LXRhdC90ZbQutCwIg!5e0!3m2!1suk!2sua!4v1729250733706!5m2!1suk!2sua" 
+                        width="560" height="315" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <div class="widget-quote">
+                <div id="quoteContent">"У тетрісі, як і в житті, важливо вміти швидко приймати рішення."</div>
+            </div>
+        </div>
+
+        <div id="game-screen" class="screen hidden">
+            <div class="game-container">
+                <canvas id="tetris-board"></canvas>
+                <div class="game-info">
+                    <div id="player-info">Гравець: <span id="player-name-display"></span></div>
+                    <div id="points">Очки: 0</div>
+                    <div class="control-buttons">
+                        <button id="pause-button">Пауза</button>
+                        <button id="stop-button">Зупинити</button>
+                        <button id="sound-button">Вимкнути звук</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="instructions-screen" class="screen hidden">
+            <h2>Інструкція до гри <span>Тетріс</span></h2>
+            <div class="instructions">
+                <p>← → : Рух</p>
+                <p>↓ : Прискорення</p>
+                <p>A : Поворот вліво</p>
+                <p>D : Поворот вправо</p>
+            </div>
+            <button id="back-to-welcome">Назад</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
